@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Movie List</title>
+</head>
+<body>
+    <h1>Movie List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Year</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="movie : ${movies}"> <td th:text="${movie.name}"></td> 
+                <td th:text="${movie.genre}"></td>
+                <td th:text="${movie.year}"></td>
+                <td th:text="${movie.score}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
